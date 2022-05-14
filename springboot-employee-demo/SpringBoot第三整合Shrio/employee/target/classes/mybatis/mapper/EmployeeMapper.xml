@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="henu.soft.xiaosi.mapper.EmployeeMapper">
+    <resultMap id="EmployeeMap" type="Employee">
+        <id property="id" column="id"/>
+        <result property="lastName" column="lastName"/>
+        <result property="email" column="email"/>
+        <result property="gender" column="gender" />
+        <result property="birth" column="birth"/>
+        <association property="department" javaType="Department">
+            <id property="id" column="id"/>
+            <result property="departmentName" column="departmentName"/>
+        </association>
+
+    </resultMap>
+
+<!--    查询所有的员工和部门-->
+    <select id="getEmployees" resultMap="EmployeeMap">
+        SELECT e.id,e.lastName,e.email,e.gender,d.departmentName,e.birth
+        FROM employee e,department d
+        WHERE e.departmentId = d.id;
+
+    </select>
+<!--    新增一个员工-->
+    <select id="save" parameterType="Employee" >
+        insert into employee(lastName,email,gender,departmentId,birth)
+        values(#{lastName},#{email},#{gender},#{department.id},#{birth});
+    </select>
+<!--    查询一个员工-->
+    <select id="getEmployeeById" resultType="Employee" parameterType="Integer">
+        select * from employee where id = #{id}
+    </select>
+    <select id="delete" parameterType="int" >
+        delete from employee where id = #{id}
+    </select>
+<!--    修改一个员工-->
+
+    <update id="edit" parameterType="Employee">
+        update employee set lastName=#{lastName},email=#{email},gender=#{gender},departmentId=#{department.id},birth=#{birth} where id=#{id}
+    </update>
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="henu.soft.xiaosi.mapper.DepartmentMapper">
+
+    <select id="getDepartments" resultType="Department">
+       select * from department;
+    </select>
+
+    <select id="getDepartmentById" resultType="Department" parameterType="int">
+       select d.id,d.departmentName
+       from department d,employee e
+       where e.id = #{id} and d.id = e.departmentId;
+    </select>
+
+</mapper>
