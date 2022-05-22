@@ -1,8 +1,0 @@
-nebula:
-  address[0]:
-    host: 127.0.0.1
-    port: 9669
-  username: root
-  password: root
-  reconnect: false
-  space: basketballplayer
