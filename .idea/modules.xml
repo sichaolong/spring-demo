@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-demo.iml" filepath="$PROJECT_DIR$/.idea/spring-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-dynamic-tp-demo/springboot-dynamic-tp-demo.iml" filepath="$PROJECT_DIR$/springboot-dynamic-tp-demo/springboot-dynamic-tp-demo.iml" />
     </modules>
   </component>
 </project>

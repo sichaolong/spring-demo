@@ -1,0 +1,38 @@
+server:
+  port: 8888
+  servlet:
+    context-path: "/dynamic-tp"
+
+spring:
+  application:
+    name: dynamic-tp-nacos
+  # 开启的配置文件 dynamic-tp-nacos-dev.yml,放在nacos上
+  profiles:
+    active: dev
+
+nacos:
+  config:
+    server-addr: 127.0.0.1:8848
+    type: yaml
+    data-ids: dynamic-tp-nacos-dev.yml
+    auto-refresh: true
+    group: DEFAULT_GROUP
+    bootstrap:
+      enable: true
+      log-enable: true
+  discovery:
+    auto-register: true
+
+logging:
+  level:
+    #root: DEBUG
+    com.alibaba.nacos.client.config.impl: WARN
+
+# 暴露端口
+management:
+  endpoints:
+    enabled-by-default: true # 默认开启所有监控端点信息，访问：http://localhost:8888/dynamic-tp/actuator
+    web:
+      exposure:
+        include: '*' # 以web方式暴露所有端点
+

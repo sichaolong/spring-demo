@@ -1,0 +1,12 @@
+GET http://localhost:8888/dynamic-tp/actuator/health
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+<> 2022-06-28T025101.200.json
+
+###
+
+GET http://localhost:8888/dynamic-tp/actuator/health/**
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+###
+

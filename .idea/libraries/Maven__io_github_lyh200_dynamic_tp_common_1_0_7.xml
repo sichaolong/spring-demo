@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.github.lyh200:dynamic-tp-common:1.0.7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Maven/MavenLocalRepository/maven_repository/io/github/lyh200/dynamic-tp-common/1.0.7/dynamic-tp-common-1.0.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../Maven/MavenLocalRepository/maven_repository/io/github/lyh200/dynamic-tp-common/1.0.7/dynamic-tp-common-1.0.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../Maven/MavenLocalRepository/maven_repository/io/github/lyh200/dynamic-tp-common/1.0.7/dynamic-tp-common-1.0.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
