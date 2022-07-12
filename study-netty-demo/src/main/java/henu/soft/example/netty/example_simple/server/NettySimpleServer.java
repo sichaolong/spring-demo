@@ -1,13 +1,17 @@
-package henu.soft.netty.example.server;
+package henu.soft.example.netty.example_simple.server;
 
 import org.jboss.netty.bootstrap.ServerBootstrap;
+import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.channel.*;
 import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
 
-public class NettyServer {
+/**
+ * netty 3.x demo
+ */
+public class NettySimpleServer {
     final static int port = 8080;
 
     public static void main(String[] args) {
@@ -62,6 +66,16 @@ class Server {
                 System.out.println("New message " + e.toString() + " from "
                         + ctx.getChannel());
                 processMessage(e);
+                // 打印出来输入内容
+                ChannelBuffer buffer = (ChannelBuffer) e.getMessage();
+                while(buffer.readable()) {
+                    System.out.println((char) buffer.readByte());
+                    System.out.flush();
+                }
+
+                // 将服务器接收到的东西返回
+                Channel channel = e.getChannel();
+                channel.write(e.getMessage());
             } catch (Exception ex) {
                 ex.printStackTrace();
                 throw ex;

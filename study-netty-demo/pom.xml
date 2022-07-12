@@ -19,11 +19,39 @@
     <dependencies>
 
 <!--        netty-->
+
+<!-- 在Netty 3.x中，软件包来自org.jboss.netty。* http://netty.io/3.10/api/index.html.
+但是启动了Netty 4.x的包裹来自Io.netty。*请参阅： http://netty.io/4.0/api/index.html.-->
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty</artifactId>
-            <version>3.5.6.Final</version>
+            <version>3.10.6.Final</version>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>io.netty</groupId>-->
+<!--            <artifactId>netty-transport</artifactId>-->
+<!--            <version>4.1.77.Final</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.netty</groupId>-->
+<!--            <artifactId>netty-handler</artifactId>-->
+<!--            <version>4.1.77.Final</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.77.Final</version>
+        </dependency>
+
+
+        <!--这里使用jackson反序列字节码-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.7</version>
+        </dependency>
+
 
 
         <dependency>
@@ -41,6 +69,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-codec-http</artifactId>
+            <version>4.1.77.Final</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
