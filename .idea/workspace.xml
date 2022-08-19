@@ -26,13 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b37d2444-a50d-4d48-b606-bdd88f7315a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-netty-demo/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spring-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spring-demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b37d2444-a50d-4d48-b606-bdd88f7315a0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +171,7 @@
       <workItem from="1656471185034" duration="6237000" />
       <workItem from="1656644867862" duration="369000" />
       <workItem from="1656645247875" duration="6000" />
-      <workItem from="1656654710332" duration="379000" />
+      <workItem from="1656654710332" duration="1217000" />
     </task>
     <servers />
   </component>
@@ -272,9 +266,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="530" y="306" width="788" height="344" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.864@0.0.1536.864" timestamp="1656385622429" />
-    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1656402987631">
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1656655300846">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1656402987631" />
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1656655300846" />
   </component>
 </project>

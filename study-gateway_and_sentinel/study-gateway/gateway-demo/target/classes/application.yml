@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+
+    gateway:
+      routes:
+        - id : test-router1
+          uri: http://localhost:80   # provider-demo的 的路由地址
+          predicates:
+            - Path=/test/**
+        - id: provider-dynamic-loadbalance-router  # 路由的id，没有固定规则但要求唯一，建议配合服务名
+          # uri: http://localhost:8001   # 匹配后提供服务的路由地址
+          uri: lb://provider-demo   # 需要注意的是uri的协议为lb，表示启用Gateway的负载均衡功能。lb://serviceName是spring cloud gateway在微服务中自动为我们创建的负载均衡uri。
+          predicates:
+            - Path=/loadbalance/**         # 断言，路径相匹配的路由
