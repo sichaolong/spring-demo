@@ -27,7 +27,12 @@ public class DemoController {
 
 
     @RequestMapping(value = "/loadbalance/hello", method = RequestMethod.GET)
-    public String loadbalance(){
-        return "hello,provider1,port:81";
+    public String loadbalanceByYml(){
+        return "hello,provider1,port:80";
+    }
+
+    @RequestMapping(value = "/lbtest/hello", method = RequestMethod.GET)
+    public String loadbalanceByConfigClass(){
+        return "hello,provider1,port:80,this is config class ..";
     }
 }

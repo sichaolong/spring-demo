@@ -34,14 +34,21 @@
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
 
+<!--        使用gateway的限流，需要借助redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+        </dependency>
 
-        <!--        nacos依赖-->
+
+<!--        nacos服务与发现-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
             <version>2021.1</version>
         </dependency>
 
+<!--        nacos配置中心-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>

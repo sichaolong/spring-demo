@@ -7,10 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sentinel-demo" />
+        <module name="study-gateway" />
         <module name="study-sentinel" />
         <module name="provider-demo" />
-        <module name="study-gateway" />
+        <module name="sentinel-demo" />
         <module name="gateway-demo" />
       </profile>
     </annotationProcessing>

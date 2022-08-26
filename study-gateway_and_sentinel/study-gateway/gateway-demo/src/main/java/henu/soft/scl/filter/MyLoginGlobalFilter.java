@@ -37,11 +37,11 @@ public class MyLoginGlobalFilter implements GlobalFilter, Ordered {
         String token = exchange.getRequest().getHeaders().getFirst("token");
 
         log.info("token is :{}",token );
-        if (StringUtils.isBlank(token)) {
-            log.info("用户未登录!");
-            exchange.getResponse().setStatusCode(HttpStatus.NOT_ACCEPTABLE);
-            return exchange.getResponse().setComplete();
-        }
+//        if (StringUtils.isBlank(token)) {
+//            log.info("用户未登录!");
+//            exchange.getResponse().setStatusCode(HttpStatus.NOT_ACCEPTABLE);
+//            return exchange.getResponse().setComplete();
+//        }
         // 继续下一个filter
         return chain.filter(exchange);
     }
