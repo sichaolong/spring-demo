@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    # 配置sentinel的dashboard
+    sentinel:
+      transport:
+        port: 18400
+        dashboard: localhost:8050
+
