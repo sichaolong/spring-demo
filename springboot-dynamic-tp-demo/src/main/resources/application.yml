@@ -2,6 +2,10 @@ server:
   port: 8888
   servlet:
     context-path: "/dynamic-tp"
+  tomcat:
+    ## 开启tomcat监控
+    mbeanregistry:
+      enabled: true
 
 spring:
   application:
@@ -22,6 +26,7 @@ nacos:
       log-enable: true
   discovery:
     auto-register: true
+
 
 logging:
   level:

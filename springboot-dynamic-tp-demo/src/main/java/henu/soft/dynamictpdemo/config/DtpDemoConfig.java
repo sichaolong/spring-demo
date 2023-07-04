@@ -1,10 +1,10 @@
 package henu.soft.dynamictpdemo.config;
 
-import com.dtp.common.em.QueueTypeEnum;
-import com.dtp.core.support.DynamicTp;
-import com.dtp.core.support.ThreadPoolBuilder;
-import com.dtp.core.support.ThreadPoolCreator;
-import com.dtp.core.thread.DtpExecutor;
+import org.dromara.dynamictp.common.em.QueueTypeEnum;
+import org.dromara.dynamictp.core.support.DynamicTp;
+import org.dromara.dynamictp.core.support.ThreadPoolBuilder;
+import org.dromara.dynamictp.core.support.ThreadPoolCreator;
+import org.dromara.dynamictp.core.thread.DtpExecutor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,7 +13,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 @Configuration
-public class DtpConfig {
+public class DtpDemoConfig {
 
     /**
      * 通过{@link DynamicTp} 注解定义普通juc线程池，会享受到该框架监控功能，注解名称优先级高于方法名
@@ -59,6 +59,7 @@ public class DtpConfig {
      * tips: 建议直接在配置中心配置就行，不用@Bean声明
      * @return 线程池实例
      */
+    @DynamicTp("dtpExecutor2")
     @Bean
     public ThreadPoolExecutor dtpExecutor2() {
         return ThreadPoolBuilder.newBuilder()
